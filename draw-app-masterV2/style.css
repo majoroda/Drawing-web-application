@@ -1,0 +1,107 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 40px;
+	padding:2px;
+	border: #fff;
+    background: none;
+    margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.sideBarItem:hover{
+    transform: scale(1.2);
+    transition: transform .5s;
+    
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:40px;
+	border-radius: 10px;
+	
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 230px  minmax(500px, 1fr);
+	grid-template-rows: 35px minmax(500px, 1fr) 160px;
+	grid-template-areas:
+			"header header header"
+			"sidebar content content"
+			"colourP colourP options";
+	background-color: #fff;
+	color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+#controls{
+    display: flex;
+    position: absolute;
+    margin-left: 600px;
+	margin-top: 5px;
+         
+}
+
+#vertex{
+	display: flex;
+    position: absolute;
+    margin-left: 400px;
+	margin-top: 7px;
+	
+}
+
